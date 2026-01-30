@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite Padrinhos e Madrinhas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f1ea;
+      display: flex;
+      justify-content: center;
+      padding: 20px 12px;
+    }
+
+    .convite {
+      background: #fffdf8;
+      width: 100%;
+      max-width: 420px;
+      padding: 60px 20px 40px;
+      text-align: center;
+      border-radius: 22px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    /* Florais decorativos */
+ 
+    .floral-bottom {
+      position: absolute;
+      width: 140px;
+      opacity: 0.8;
+    }
+.floral-top {
+  position: absolute;
+  top: 0;   /* encosta no topo */
+  left: -60px;  /* encosta na esquerda */
+  width: 140px;
+  opacity: 0.8;
+  z-index: 0; /* 🔥 garante que fique atrás do texto */
+}
+
+
+    
+    .floral-bottom { bottom: -10px; right: -10px; }
+
+    .titulo {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #8a7c61;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .nomes {
+      font-family: 'Great Vibes', cursive;
+      font-size: 42px;
+      color: #b08a3e;
+      margin: 6px 0 18px;
+      line-height: 1.1;
+    }
+
+    .texto {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 24px;
+      padding: 0 6px;
+    }
+
+    .foto-padrinhos {
+      width: 160px;
+      height: 160px;
+      margin: 10px auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #d8c7a1;
+      background: #fff;
+    }
+    .foto-padrinhos img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .data-editorial {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      margin: 36px 0 42px;
+      color: #2f2f2f;
+    }
+    .data-editorial .lado {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .data-editorial .texto {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #6f6f6f;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+    .data-editorial .linha {
+      width: 64px;
+      height: 1px;
+      background-color: #bcbcbc;
+    }
+    .data-editorial .centro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.1;
+    }
+    .data-editorial .mes {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #6f6f6f;
+      margin-bottom: 4px;
+    }
+    .data-editorial .dia {
+      font-size: 72px;
+      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      margin-top: -20px;
+    }
+    .data-editorial .ano {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #6f6f6f;
+      margin-top: 12px;
+    }
+
+
+    .bloco {
+      margin: 20px 0;
+      padding: 15px;
+      border-top: 1px solid #e5dcc7;
+      border-bottom: 1px solid #e5dcc7;
+    }
+    .bloco h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: #b08a3e;
+      font-weight: 600;
+    }
+    .bloco p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .igreja {
+      margin: 20px 0;
+      padding: 15px;
+      border-top: 1px solid #e5dcc7;
+    }
+    .igreja h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: #b08a3e;
+      font-weight: 600;
+    }
+    .igreja p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+      .terno {
+      margin: 20px 0;
+      padding: 15px;
+            border-bottom: 1px solid #e5dcc7;
+
+    }
+    .terno h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: #b08a3e;
+      font-weight: 600;
+    }
+    .terno p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .botao {
+      display: block;
+      margin: 32px auto 0;
+      padding: 16px;
+      width: 100%;
+      max-width: 260px;
+      background-color: #b08a3e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 40px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .botao:hover { background-color: #967433; transform: translateY(-2px); }
+
+    footer { margin-top: 22px; font-size: 12px; color: #999; }
+  </style>
+</head>
+<body>
+
+  <div class="convite">
+
+    <!-- Florais -->
+    <img src="download (13).png" class="floral-top" alt="">
+    <img src="download (13).png" class="floral-bottom" alt="">
+
+    <div class="titulo">Convite Especial</div>
+    <div class="nomes">Padrinhos & Madrinhas</div>
+
+    <div class="texto">
+      Queridos, vocês são parte fundamental deste momento.  
+      Com muito carinho, convidamos para celebrar conosco.
+    </div>
+
+    <div class="foto-padrinhos">
+      <img src="e391651f-53a5-484a-a484-8184fa1500b9.jpg" alt="Foto dos padrinhos e madrinhas">
+    </div>
+
+    <!-- Bloco de data -->
+    <div class="data-editorial">
+      <div class="lado">
+        <span class="linha"></span>
+        <span class="texto">SÁBADO</span>
+        <span class="linha"></span>
+      </div>
+
+      <div class="centro">
+        <span class="mes">MARÇO</span>
+        <span class="dia">14</span>
+        <span class="ano">2026</span>
+      </div>
+
+      <div class="lado">
+        <span class="linha"></span>
+        <span class="texto">ÀS 16:00</span>
+        <span class="linha"></span>
+      </div>
+    </div>
+
+    <!-- Cerimônia -->
+    <div class="igreja">
+      <h3>⛪ Cerimônia</h3>
+      <p><strong>16h</strong></p>
+      <p>Paróquia São João Batista</p>
+      <p>Praça Professor Anésio Cabral, 355 – Rochdale</p>
+    </div>
+
+    <!-- Recepção -->
+    <div class="bloco">
+      <h3>🎉 Recepção</h3>
+      <p><strong>17h</strong></p>
+      <p>Salão de Festas Decora & Comemora</p>
+      <p>Rua da Imprensa, 137 – Capelinha</p>
+    </div>
+
+    <!-- Vestido & Terno -->
+    <div class="terno">
+      <h3>👗 Vestido & 🤵 Terno</h3>
+      <p><strong>Cor do Vestido:</strong> Azul Serenidade</p>
+      <p><strong>Cor do Terno:</strong> Cinza Elegante</p>
+    </div>
+
+    <a
+      class="botao"
+      href="https://wa.me/5511962835792?text=Olá!%20Confirmo%20minha%20presença%20como%20padrinho/madrinha%20💍"
+      target="_blank">
+      💖 Confirmar Presença
+    </a>
+
+    <footer>
+      Com carinho, esperamos vocês 🤍
+    </footer>
+
+  </div>
+
+</body>
+</html>
